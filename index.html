@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<title>Modeling and Materials Fall 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+#DesignChallenge1 .grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 100%;
+}
+.dc1-frame {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e6e6e6;
+}
+.dc1-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: opacity 0.2s ease;
+}
+.dc1-frame img:hover,
+.dc1-frame img:focus {
+  opacity: 0.82;
+}
+.challenge-intro {
+  max-width: 900px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+#modal01 .w3-modal-content {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateY(10px) scale(0.985);
+  transition: opacity 280ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+#modal01 {
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+#modal01.modal-visible {
+  opacity: 1;
+}
+#modal01.modal-visible .w3-modal-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+#modal01 #img01 {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 74vh;
+  object-fit: contain;
+}
+.modal-caption {
+  max-width: 900px;
+  margin: 16px auto 0;
+  padding: 18px 22px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.68);
+  text-align: left;
+  line-height: 1.65;
+}
+.modal-caption h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+.modal-caption p {
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  #modal01,
+  #modal01 .w3-modal-content {
+    transition: none;
+  }
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  } */
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+  </head>
+    <body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 27425 <br> Fall 2026</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Module2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 2</a> 
+    <a href="#DesignChallenge1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 1</a> 
+    <a href="#DesignChallenge2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 2</a>
+    <a href="#SpatialWorkshop1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Spatial Workshop 1</a>
+    <a href="#SpatialWorkshop2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Spatial Workshop 2</a>
+    <a href="#Project2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 2</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens
+<header class="w3-container w3-top w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menu</span>
+</header> -->
+
+<!-- 
+  if you want to link your image to a video use one of the following alt links as an example:
+
+  alt="test1Lorem ipsum dolor sit amet, consectetur adipiscing elit test1Lorem ipsum dolor sit amet, consectetur adipiscing elit <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+  alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+
+-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Modeling & Materials</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Weekly Activity Template</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>student name put a description here or you will lose grades</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+  </div>
+  <!-- Boilerplate -->
+  <div id="Module1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Module 2</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3>PLACEHOLDER TEXT, put a description here or you will lose grades
+    </h3>
+  </div>
+  
+  <!-- Project 2 Photo grid (modal) -->
+  <div id="DesignChallenge1" >
+    <h2>Design Challenge 1</h2>
+    <p class="challenge-intro">I walked through different areas on campus and photographed small spatial details that affected the way I moved, understood, or felt in each place. These observations look at storage, safety, accessibility, displays, and wayfinding. Click any image to see the full photograph and my observation.</p>
+    <div class="grid">
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/01.jpg" data-full="images/DesignChallenge1/01.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Wrapped boxes stored in the corridor outside the Ceramics Studio" data-title="01 - Ceramics Studio: Material Delivery" data-caption="At first I only saw a pile of boxes, but then I realized they may be necessary clay or studio supplies. The issue is not the materials themselves; temporary storage has taken over part of the public corridor and makes the entrance feel blocked and unfinished."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/02.jpg" data-full="images/DesignChallenge1/02.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Buckets and containers on an open cart near the Ceramics Studio" data-title="02 - Ceramics Studio: Open Material Cart" data-caption="The buckets are grouped on a cart, so there is some organization, but the handwritten labels are difficult to scan and the flat cart does not secure the containers. A raised edge, clearer categories, and consistent labels could make everyday use safer and faster."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/03.jpg" data-full="images/DesignChallenge1/03.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Black bags, carts, and racks stored along the Ceramics Studio corridor" data-title="03 - Ceramics Studio: Corridor Storage" data-caption="Black bags, carts, and racks extend along the corridor. I could not tell which items were temporary and which belonged there permanently, so the walking route felt narrower and less predictable than it first appeared."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/04.jpg" data-full="images/DesignChallenge1/04.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Large ceramic boards leaning against a wall near the floor" data-title="04 - Ceramics Studio: Leaning Boards" data-caption="These large boards are placed directly against the wall near the floor. They may be easy to reach, but they could tip, be chipped by people passing, or become a tripping and collision risk; a divided vertical rack would protect both the boards and the users."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/05.jpg" data-full="images/DesignChallenge1/05.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Paper rolls stored upright in an open bucket near a doorway" data-title="05 - Ceramics Studio: Paper Storage" data-caption="The paper rolls are stored upright in an open bucket near the doorway. This is a quick solution, but the paper can bend or be hit as people pass, which made me think about how fragile materials need storage that still keeps them easy to access."></div>
+
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/06.jpg" data-full="images/DesignChallenge1/06.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Ceramic cups displayed on the wall above a notice board" data-title="06 - Ceramics Studio: Cup Display" data-caption="The cup display adds personality and is one of the most attractive details in this area. At the same time, the exposed arrangement made me think about secure mounting and protection; a simple transparent cover could keep the display visible without losing its handmade feeling."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/07.jpg" data-full="images/DesignChallenge1/07.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Decorative ceramic flower boxes mounted above the studio entrance" data-title="07 - Ceramics Studio: Decorative Entrance Display" data-caption="This display is a positive part of the entrance because it immediately shows the creative identity of the studio. I still wondered how securely the pieces are mounted, since artwork above a doorway needs to stay safe while people move underneath it."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/08.jpg" data-full="images/DesignChallenge1/08.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Campus information board photographed from a normal walking distance" data-title="08 - Information Board from a Distance" data-caption="From a normal walking distance, I could see that the board contained information but could not easily read what was important. This showed me that a display does not only need content; its type size, contrast, and hierarchy also need to match the distance from which people actually see it."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/09.jpg" data-full="images/DesignChallenge1/09.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Layered recognition plaque with small gold lettering" data-title="09 - Recognition Plaque" data-caption="The layered shapes make the plaque look creative, but the small gold text and transparent surfaces reduce the contrast. I had to move much closer to understand it, so the visual style seems to compete with the purpose of communicating clearly."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/10.jpg" data-full="images/DesignChallenge1/10.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Exit sign and Glass Studio sign mounted high in an exposed ceiling corridor" data-title="10 - Glass Studio: Exit Sign" data-caption="The exit sign is mounted high, which normally helps visibility, but the exposed ceiling, pipes, lights, and studio sign create a lot of competing detail. This made me think about sightlines: having a sign is not enough if it becomes easy to miss from certain approaches."></div>
+
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/11.jpg" data-full="images/DesignChallenge1/11.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Mixed wood, metal, and sheet materials stored in an Industrial Design workspace" data-title="11 - Industrial Design: Mixed Material Storage" data-caption="The mix of wood, metal, and sheet materials shows that this is an active making space. However, the materials do not appear to have clear zones, so useful supplies start to look like obstacles and it becomes harder to understand where the working path should be."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/12.jpg" data-full="images/DesignChallenge1/12.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Tall yellow ladder standing beside a material board" data-title="12 - Industrial Design: Ladder Storage" data-caption="The ladder is easy to reach, but it stands upright in a busy work area without an obvious securing system. Even when an object is used often, it still needs a dedicated storage position so it cannot tip, block access, or be damaged."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/13.jpg" data-full="images/DesignChallenge1/13.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Lumber, bags, carts, and equipment inside the Furniture Studio" data-title="13 - Furniture Studio: Shared Work and Storage Area" data-caption="The Furniture Studio needs a large amount of lumber and equipment, so some visual complexity is expected. My concern is that bags and temporary materials spread into the movement area, making the boundary between working, storage, and circulation less clear."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/14.jpg" data-full="images/DesignChallenge1/14.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Lumber racks, ladders, and bagged materials behind a chain barrier" data-title="14 - Furniture Studio: Lumber Storage" data-caption="The chain shows that someone has tried to mark a boundary, but it does not fully organize or protect the materials behind it. The ladders, stacked lumber, and bags still create a visually heavy edge, so a stronger storage system could communicate the boundary more clearly."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/15.jpg" data-full="images/DesignChallenge1/15.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Furniture Studio double doors blocked by stored boards and materials" data-title="15 - Furniture Studio: Blocked Doorway" data-caption="This doorway is almost unusable because boards and other materials are stored directly behind it. Even if the door is not used every day, losing an access point reduces flexibility and could make maintenance, moving large projects, or emergency access more difficult."></div>
+
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/16.jpg" data-full="images/DesignChallenge1/16.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Display pedestal placed very close to the Furniture Studio door" data-title="16 - Furniture Studio: Display Near the Door" data-caption="Displaying student work near the entrance is a good idea, but this pedestal sits very close to the doorway. The object is not dangerous by itself; the problem comes from its relationship to the door and the turning space people need when entering or carrying projects."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/17.jpg" data-full="images/DesignChallenge1/17.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Bagged materials and boards stored outdoors beside C Building" data-title="17 - C Building Exterior: Temporary Materials" data-caption="These bags and boards look like temporary working materials, but their position outside makes the area feel unmanaged and may expose them to weather or damage. A defined service or loading zone could keep the practical function without making the building edge look accidental."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/18.jpg" data-full="images/DesignChallenge1/18.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Very low wooden bench outside the Textile area" data-title="18 - Textile Area: Low Bench" data-caption="The bench has a simple form and does not take up much visual space, but the seat is unusually low. It may be uncomfortable or difficult to use for some people, which reminded me that furniture can look minimal while still creating an accessibility problem."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/19.jpg" data-full="images/DesignChallenge1/19.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Corridor entrance to the Textile Studios and Office" data-title="19 - Textile Studios: Corridor Entrance" data-caption="The hanging sign identifies the Textile Studios, but the doorway and long row of lockers blend into the surrounding corridor. The destination is present without feeling strongly marked, so colour or a clearer threshold could help new visitors understand where to enter."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/20.jpg" data-full="images/DesignChallenge1/20.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Wooden display pedestal positioned close to a yellow structural post" data-title="20 - Exhibition Area: Pedestal and Yellow Post" data-caption="The pedestal and yellow post are both understandable elements, but the gap between them creates an awkward place to walk through. This small example showed me that spatial problems often come from the relationship between objects rather than from one badly designed object."></div>
+
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/21.jpg" data-full="images/DesignChallenge1/21.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Accessibility door button positioned beside a blue door marked Danger" data-title="21 - AA13 Exterior: Accessibility Button and Hazard Door" data-caption="The accessibility button operates the nearby main entrance, but it is positioned very close to a door marked Danger. This creates a confusing visual association and may require the people who depend on the button to approach an area that appears unsafe."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/22.jpg" data-full="images/DesignChallenge1/22.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Inactive digital campus wayfinding screen beside a corridor column" data-title="22 - Campus Wayfinding Screen" data-caption="A digital map can make the campus feel modern and easier to navigate, but this screen was not working when I visited. When a wayfinding tool fails, users lose trust in it, so a visible static map or other backup information is still important."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/23.jpg" data-full="images/DesignChallenge1/23.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Long corridor in the AA Building with repeated doors and displays" data-title="23 - AA Building Corridor" data-caption="This corridor is cleaner and more open than the studio areas, but its repeated doors, walls, and ceiling elements make the route feel long and similar from one section to the next. Stronger landmarks could help people understand their progress and remember where they are."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/24.jpg" data-full="images/DesignChallenge1/24.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Large blue structural column standing in a circulation area near the Food Court" data-title="24 - Food Court: Structural Column" data-caption="The column is probably necessary for the building, but it interrupts the path and feels visually separate from the surrounding space. Instead of treating it only as an obstacle, it could become a clearer landmark through graphics, colour, or wayfinding information."></div>
+      <div class="dc1-frame"><img src="images/DesignChallenge1/thumbs/25.jpg" data-full="images/DesignChallenge1/25.jpg" onclick="onClick(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();onClick(this)}" alt="Stairs, railings, and a raised platform in front of the Campus Store" data-title="25 - Campus Store: Stairs and Railings" data-caption="This area uses two stair sections, several railings, and a small raised edge to handle one level change. I noticed accessible routes elsewhere nearby, but the choice is not immediate at this point; a simpler layout or a more direct accessible connection could make the entrance feel more inclusive and less visually complicated."></div>
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+
+  <div id="DesignChallenge2" class="w3-row-padding">
+    <h2>Design Challenge 2</h2>
+    <div class="grid">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+    
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+    
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+    
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+   
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+      <img src="images/DesignChallenge2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+
+  <div id="SpatialWorkshop1" >
+    <h2>Spatial Workshop 1</h2>
+    <div class="grid">
+      <img src="images/Workshop1/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades<a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+      <img src="images/Workshop1/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+      <img src="images/Workshop1/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="SpatialWorkshop2" >
+    <h2>Spatial Workshop 2</h2>
+    <div class="grid">
+      <img src="images/Workshop2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+      <img src="images/Workshop2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+      <img src="images/Workshop2/happy.png" style="width:100%" onclick="onClick(this)" alt="put a description here or you will lose grades">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+  <!-- Boilerplate -->
+  <div id="Project2" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 2</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Final Project 2 Design</h2>
+    <p>PLACEHOLDER TEXT, put a description here or you will lose grades
+    </p>
+    <img src="images/final/happy.png" style="width:100%" onclick="onClick(this)" alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+  </div>
+  
+   <!-- Modal for full size images on click-->
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="closeImageModal()" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="captionTitle">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright" onclick="event.stopPropagation(); closeImageModal()" aria-label="Close image">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image" onclick="event.stopPropagation()">
+      <div class="modal-caption" onclick="event.stopPropagation()">
+        <h2 id="captionTitle"></h2>
+        <p id="caption"></p>
+      </div>
+
+      <!-- <div id="urLink"></div> -->
+      <!-- <a id="urLink" class="container"><iframe class="responsive-iframe"></iframe></a> -->
+    <!-- </div> -->
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+</div>
+<script>
+
+// Modal Image Gallery
+var modalCloseTimer;
+var modalImageRequest = 0;
+
+function onClick(element) {
+  var modal = document.getElementById("modal01");
+  var modalImage = document.getElementById("img01");
+  var fullImagePath = element.dataset.full || element.src;
+  var requestId = ++modalImageRequest;
+
+  clearTimeout(modalCloseTimer);
+  modalImage.src = element.src;
+  modalImage.alt = element.alt;
+  modal.style.display = "block";
+  modal.setAttribute("aria-hidden", "false");
+
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      modal.classList.add("modal-visible");
+    });
+  });
+
+  if (fullImagePath !== element.src) {
+    var fullImage = new Image();
+    fullImage.onload = function() {
+      if (requestId === modalImageRequest) {
+        modalImage.src = fullImagePath;
+      }
+    };
+    fullImage.src = fullImagePath;
+  }
+
+  document.getElementById("captionTitle").textContent = element.dataset.title || "";
+  document.getElementById("caption").textContent = element.dataset.caption || element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+
+function closeImageModal() {
+  var modal = document.getElementById("modal01");
+  if (modal.style.display !== "block") {
+    return;
+  }
+
+  modal.classList.remove("modal-visible");
+  modalImageRequest++;
+  clearTimeout(modalCloseTimer);
+  modalCloseTimer = setTimeout(function() {
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
+    document.getElementById("img01").src = "";
+  }, 280);
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeImageModal();
+  }
+});
+</script>
+
+</body>
+</html>
